@@ -1,6 +1,6 @@
 {
   "name": "@earnkeeper/ekp-sdk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "The EarnKeeper.io Javascript SDK",
   "author": "Gavin Shaw <gavin@earnkeeper.io> (https://github.com/gavin-shaw)",
   "keywords": [
