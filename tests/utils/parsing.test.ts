@@ -1,4 +1,4 @@
-import { parseEvmAddress, parseEvmNumber } from '../../src';
+import { NULL_ADDRESS, parseEvmAddress, parseEvmNumber } from '../../src';
 
 describe('parseEvmNumber', () => {
   it('parses a number successfully', () => {
@@ -30,5 +30,12 @@ describe('parseEvmAddress', () => {
     );
 
     expect(result).toEqual('0x2adb14f05bffeecfedfe4fcbdceabf3b12decf4d');
+  });
+  it('parses null address successfully', () => {
+    const result = parseEvmAddress(
+      '0x0000000000000000000000000000000000000000000000000000000000000000',
+    );
+
+    expect(result).toEqual(NULL_ADDRESS);
   });
 });
