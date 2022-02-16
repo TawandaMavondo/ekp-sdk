@@ -1,6 +1,6 @@
 {
   "name": "@earnkeeper/ekp-sdk",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "The EarnKeeper.io Javascript SDK",
   "author": "Gavin Shaw <gavin@earnkeeper.io> (https://github.com/gavin-shaw)",
   "keywords": [
@@ -30,6 +30,7 @@
   "dependencies": {
     "bycontract": "^2.0.11",
     "ethers": "^5.5.4",
+    "lodash": "^4.17.21",
     "moment": "^2.29.1"
   },
   "devDependencies": {
@@ -37,6 +38,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-typescript": "^7.16.7",
     "@types/jest": "^27.4.0",
+    "@types/lodash": "^4.14.178",
     "@types/node": "^16.11.7",
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
