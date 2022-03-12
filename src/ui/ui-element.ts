@@ -1,6 +1,6 @@
 import { DefaultProps } from './default-props';
 
-export interface UiElement {
+export type UiElement = Readonly<{
   _type: string;
   props?: DefaultProps;
-}
+}>;

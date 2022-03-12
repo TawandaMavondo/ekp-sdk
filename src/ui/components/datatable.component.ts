@@ -15,15 +15,20 @@ export interface DatatableProps extends DefaultProps {
   defaultSortAsc?: RpcOrPrimitive;
   defaultSortFieldId?: RpcOrPrimitive;
   filterable?: RpcOrPrimitive;
+  gridView?: {
+    tileWidth?: number[];
+    tile: UiElement;
+  };
+  isBusy?: string | Rpc;
+  onRowClicked?: Rpc;
   pagination?: RpcOrPrimitive;
   paginationPerPage?: RpcOrPrimitive;
-  onRowClicked?: Rpc;
-  isBusy?: string | Rpc;
 }
 
 export interface DatatableColumn {
   cell?: UiElement;
   filterable?: RpcOrPrimitive;
+  filterOptions?: RpcOrPrimitive;
   grow?: Rpc | number;
   id: RpcOrPrimitive;
   label?: Rpc | string;

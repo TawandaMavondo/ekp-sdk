@@ -15,3 +15,4 @@ export function collection(type) {
 
   return type.name;
 }
+

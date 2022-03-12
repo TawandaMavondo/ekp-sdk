@@ -9,8 +9,13 @@ export function Button(props?: ButtonProps): UiElement {
   };
 }
 
-export interface ButtonProps extends DefaultProps {
-  label: string | Rpc;
-  isSubmit?: boolean;
-  isBusy?: boolean | string | Rpc;
-}
+export type ButtonProps = DefaultProps &
+  Readonly<{
+    busyWhen?: string | Rpc;
+    content?: UiElement;
+    icon?: string | Rpc;
+    isSubmit?: boolean;
+    label?: string | Rpc;
+    onClick?: Rpc;
+    outline?: boolean | Rpc;
+  }>;

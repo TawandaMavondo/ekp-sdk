@@ -1,5 +1,5 @@
 import { DefaultProps } from '../default-props';
-import { Rpc, RpcOrPrimitive } from '../rpc';
+import { Rpc } from '../rpc';
 import { UiElement } from '../ui-element';
 
 export function Image(props: ImageProps): UiElement {
@@ -10,7 +10,9 @@ export function Image(props: ImageProps): UiElement {
 }
 
 export interface ImageProps extends DefaultProps {
-  src: UiElement | RpcOrPrimitive;
-  size?: UiElement | RpcOrPrimitive;
-  rounded?: Rpc | boolean;
+  src: string | Rpc;
+  size?: string | number | Rpc;
+  height?: string | number | Rpc;
+  width?: string | number | Rpc;
+  rounded?: boolean | Rpc;
 }
