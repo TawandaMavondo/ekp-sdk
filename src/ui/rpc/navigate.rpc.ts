@@ -1,9 +1,9 @@
-import { Rpc, RpcOrPrimitive } from './types';
+import { Rpc } from './types';
 
 export function navigate(
-  location: RpcOrPrimitive,
-  newTab: RpcOrPrimitive = false,
-  external: RpcOrPrimitive = false,
+  location: string | Rpc,
+  newTab: boolean | Rpc = false,
+  external: boolean | Rpc = false,
 ): Rpc {
   return {
     method: 'navigate',

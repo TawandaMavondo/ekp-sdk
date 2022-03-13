@@ -1,6 +1,6 @@
-import { Rpc, RpcOrPrimitive } from './types';
+import { Rpc } from './types';
 
-export function jsonArray(values: RpcOrPrimitive): Rpc {
+export function jsonArray(values: Rpc): Rpc {
   return {
     method: 'jsonArray',
     params: [values],

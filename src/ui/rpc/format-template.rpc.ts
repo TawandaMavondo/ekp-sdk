@@ -1,8 +1,8 @@
-import { Rpc, RpcOrPrimitive } from './types';
+import { Rpc } from './types';
 
 export function formatTemplate(
-  value: RpcOrPrimitive,
-  scope: Record<string, RpcOrPrimitive>,
+  value: string | Rpc,
+  scope: Record<string, any>,
 ): Rpc {
   return {
     method: 'formatTemplate',

@@ -1,6 +1,6 @@
 import { Rpc } from './types';
 
-export function formatDatetime(value: Rpc | string | number): Rpc {
+export function formatDatetime(value: number | Rpc): Rpc {
   return {
     method: 'formatDatetime',
     params: [value],

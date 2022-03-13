@@ -1,13 +1,13 @@
 import { DefaultProps } from '../default-props';
 import { UiElement } from '../ui-element';
 
-export function Col(props?: ColProps): UiElement {
+export function ModalBody(props: ModalBodyProps): UiElement {
   return {
-    _type: 'Col',
+    _type: 'ModalBody',
     props,
   };
 }
 
-export interface ColProps extends DefaultProps {
+export interface ModalBodyProps extends DefaultProps {
   children: UiElement[];
 }

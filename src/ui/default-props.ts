@@ -1,8 +1,8 @@
-import { RpcOrPrimitive, When } from './rpc/types';
+import { Rpc, When } from './rpc/types';
 
 export type DefaultProps = Readonly<{
-  className?: string;
-  context?: RpcOrPrimitive;
+  className?: string | Rpc;
+  context?: string | Rpc;
   when?: When;
-  tooltip?: RpcOrPrimitive;
+  tooltip?: string | Rpc;
 }>;

@@ -1,20 +1,13 @@
-export type RpcOrPrimitive =
-  | Rpc
+export type Rpc =
   | string
-  | number
-  | boolean
-  | string[]
-  | number[];
-
-export type Rpc = Readonly<{
-  method: string;
-  params?: ReadonlyArray<any>;
-}>;
+  | Readonly<{
+      method: string;
+      params?: ReadonlyArray<any>;
+    }>;
 
 export type When =
   | Readonly<{
-      not: Rpc | string | boolean;
+      not: boolean | Rpc;
     }>
-  | Rpc
-  | string
-  | boolean;
+  | boolean
+  | Rpc;

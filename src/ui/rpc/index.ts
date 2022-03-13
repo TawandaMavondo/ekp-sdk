@@ -8,5 +8,6 @@ export * from './format-time-to-now.rpc';
 export * from './format-token.rpc';
 export * from './json-array.rpc';
 export * from './navigate.rpc';
+export * from './show-modal';
 export * from './sum.rpc';
 export * from './types';

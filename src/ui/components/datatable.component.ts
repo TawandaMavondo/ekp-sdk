@@ -1,5 +1,5 @@
 import { DefaultProps } from '../default-props';
-import { Rpc, RpcOrPrimitive } from '../rpc';
+import { Rpc } from '../rpc';
 import { UiElement } from '../ui-element';
 
 export function Datatable(props: DatatableProps): UiElement {
@@ -11,30 +11,32 @@ export function Datatable(props: DatatableProps): UiElement {
 
 export interface DatatableProps extends DefaultProps {
   columns: DatatableColumn[];
-  data: RpcOrPrimitive;
-  defaultSortAsc?: RpcOrPrimitive;
-  defaultSortFieldId?: RpcOrPrimitive;
-  filterable?: RpcOrPrimitive;
+  data: any[] | Rpc;
+  defaultSortAsc?: boolean | Rpc;
+  defaultSortFieldId?: string | Rpc;
+  filterable?: boolean | Rpc;
   gridView?: {
     tileWidth?: number[];
     tile: UiElement;
   };
-  isBusy?: string | Rpc;
+  busyWhen?: boolean | string | Rpc;
   onRowClicked?: Rpc;
-  pagination?: RpcOrPrimitive;
-  paginationPerPage?: RpcOrPrimitive;
+  pagination?: boolean | Rpc;
+  paginationPerPage?: number | Rpc;
+  showExport?: boolean | Rpc;
+  showLastUpdated?: boolean | Rpc;
 }
 
 export interface DatatableColumn {
   cell?: UiElement;
-  filterable?: RpcOrPrimitive;
-  filterOptions?: RpcOrPrimitive;
-  grow?: Rpc | number;
-  id: RpcOrPrimitive;
-  label?: Rpc | string;
-  name?: RpcOrPrimitive;
-  right?: RpcOrPrimitive;
-  sortable?: RpcOrPrimitive;
-  value?: RpcOrPrimitive;
-  width?: Rpc | number | string;
+  filterOptions?: string[] | Rpc;
+  filterable?: boolean | Rpc;
+  grow?: number | Rpc;
+  id: string | Rpc;
+  label?: string | Rpc;
+  name?: string | Rpc;
+  right?: boolean | Rpc;
+  sortable?: boolean | Rpc;
+  value?: number | string | Rpc;
+  width?: string | Rpc;
 }
