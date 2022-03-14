@@ -7,6 +7,7 @@ export type ClientStateDto = Readonly<{
     hiddenChains: string[];
     selectedCurrency: CurrencyDto;
     watchedWallets: ReadonlyArray<WatchedWalletDto>;
+    subscribed: boolean;
   }>;
 }>;
 
