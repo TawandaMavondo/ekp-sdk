@@ -10,33 +10,45 @@ export function Datatable(props: DatatableProps): UiElement {
 }
 
 export interface DatatableProps extends DefaultProps {
+  busyWhen?: boolean | string | Rpc;
   columns: DatatableColumn[];
   data: any[] | Rpc;
-  defaultSortAsc?: boolean | Rpc;
-  defaultSortFieldId?: string | Rpc;
-  filterable?: boolean | Rpc;
-  gridView?: {
-    tileWidth?: number[];
-    tile: UiElement;
-  };
-  busyWhen?: boolean | string | Rpc;
+  defaultSortAsc?: boolean;
+  defaultSortFieldId?: string;
+  defaultView?: 'grid' | 'column';
+  dense?: boolean;
+  disabled?: boolean;
+  filterable?: boolean;
+  gridView?: { tileWidth?: number[]; tile: UiElement };
+  highlightOnHover?: boolean;
+  pointerOnHover?: boolean;
+  noTableHead?: boolean;
   onRowClicked?: Rpc;
-  pagination?: boolean | Rpc;
-  paginationPerPage?: number | Rpc;
-  showExport?: boolean | Rpc;
-  showLastUpdated?: boolean | Rpc;
+  pagination?: boolean;
+  paginationPerPage?: number;
+  showExport?: boolean;
+  showLastUpdated?: boolean;
+  stripe?: boolean;
 }
 
 export interface DatatableColumn {
   cell?: UiElement;
-  filterOptions?: string[] | Rpc;
-  filterable?: boolean | Rpc;
-  grow?: number | Rpc;
-  id: string | Rpc;
+  center?: boolean;
+  compact?: boolean;
+  filterOptions?: string[];
+  filterable?: boolean;
+  grow?: number;
+  id: string;
   label?: string | Rpc;
-  name?: string | Rpc;
-  right?: boolean | Rpc;
-  sortable?: boolean | Rpc;
+  hide?: string | number;
+  maxWidth?: string;
+  minWidth?: string;
+  name?: string;
+  omit?: boolean;
+  reorder?: boolean;
+  right?: boolean;
+  sortable?: boolean;
   value?: number | string | Rpc;
-  width?: string | Rpc;
+  width?: string;
+  wrap?: boolean;
 }
