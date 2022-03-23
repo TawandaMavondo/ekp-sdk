@@ -9,7 +9,7 @@ export function Datatable(props: DatatableProps): UiElement {
   };
 }
 
-export interface DatatableProps extends DefaultProps {
+export type DatatableProps = Readonly<{
   busyWhen?: boolean | string | Rpc;
   columns: DatatableColumn[];
   data: any[] | Rpc;
@@ -18,37 +18,46 @@ export interface DatatableProps extends DefaultProps {
   defaultView?: 'grid' | 'column';
   dense?: boolean;
   disabled?: boolean;
-  filterable?: boolean;
+  filters?: FilterSchemaDto[];
   gridView?: { tileWidth?: number[]; tile: UiElement };
   highlightOnHover?: boolean;
-  pointerOnHover?: boolean;
   noTableHead?: boolean;
   onRowClicked?: Rpc;
   pagination?: boolean;
   paginationPerPage?: number;
+  pointerOnHover?: boolean;
   showExport?: boolean;
   showLastUpdated?: boolean;
   stripe?: boolean;
-}
+}> &
+  DefaultProps;
 
-export interface DatatableColumn {
+export type DatatableColumn = Readonly<{
   cell?: UiElement;
   center?: boolean;
   compact?: boolean;
-  filterOptions?: string[];
-  filterable?: boolean;
+  format?: string | Rpc;
   grow?: number;
-  id: string;
-  label?: string | Rpc;
   hide?: string | number;
+  id: string;
   maxWidth?: string;
   minWidth?: string;
-  name?: string;
   omit?: boolean;
   reorder?: boolean;
   right?: boolean;
+  searchable?: boolean;
   sortable?: boolean;
+  title?: string;
   value?: number | string | Rpc;
   width?: string;
   wrap?: boolean;
-}
+}>;
+
+export type FilterSchemaDto = Readonly<{
+  columnId: string;
+  defaults?: boolean | boolean[] | Rpc;
+  max?: number | Rpc;
+  min?: number | Rpc;
+  options?: string[] | Rpc;
+  type: string;
+}>;
