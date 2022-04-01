@@ -1,3 +1,4 @@
+export * from './avatar.component';
 export * from './button.component';
 export * from './card.component';
 export * from './col.component';
