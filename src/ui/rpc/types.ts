@@ -3,6 +3,7 @@ export type Rpc =
   | Readonly<{
       method: string;
       params?: ReadonlyArray<any>;
+      target?: string;
     }>;
 
 export type When =
