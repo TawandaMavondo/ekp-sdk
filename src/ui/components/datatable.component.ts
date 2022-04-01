@@ -15,7 +15,16 @@ export type DatatableProps = Readonly<{
   data: any[] | Rpc;
   defaultSortAsc?: boolean;
   defaultSortFieldId?: string;
-  defaultView?: 'grid' | 'column';
+  defaultView?:
+    | DatatableView
+    | Readonly<{
+        xs?: DatatableView;
+        sm?: DatatableView;
+        md?: DatatableView;
+        lg?: DatatableView;
+        xl?: DatatableView;
+        xxl?: DatatableView;
+      }>;
   dense?: boolean;
   disabled?: boolean;
   filters?: FilterSchemaDto[];
@@ -61,3 +70,5 @@ export type FilterSchemaDto = Readonly<{
   options?: string[] | Rpc;
   type: string;
 }>;
+
+export type DatatableView = 'grid' | 'column';
