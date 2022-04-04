@@ -67,8 +67,16 @@ export type FilterSchemaDto = Readonly<{
   defaults?: boolean | boolean[] | Rpc;
   max?: number | Rpc;
   min?: number | Rpc;
-  options?: string[] | Rpc;
+  allowCustomOption?: boolean;
+  options?: FilterOption[] | Rpc;
   type: string;
 }>;
 
 export type DatatableView = 'grid' | 'column';
+
+export type FilterOption =
+  | string
+  | Readonly<{
+      label: string;
+      query?: string;
+    }>;
