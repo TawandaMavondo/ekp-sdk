@@ -70,6 +70,7 @@ export type FilterSchemaDto = Readonly<{
   allowCustomOption?: boolean;
   options?: FilterOption[] | Rpc;
   type: string;
+  imageMap?: Record<string, string>;
 }>;
 
 export type DatatableView = 'grid' | 'column';

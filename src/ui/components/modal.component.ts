@@ -17,6 +17,7 @@ export interface ModalProps extends DefaultProps {
   children: UiElement[];
   contentClassName?: string | Rpc;
   fade?: boolean | Rpc;
+  header?: string | UiElement | Rpc;
   modalClassName?: string | Rpc;
   scrollable?: boolean | Rpc;
   size?: string | Rpc;

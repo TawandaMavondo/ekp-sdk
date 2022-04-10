@@ -46,6 +46,12 @@ export type ButtonProps = DefaultProps &
      */
     icon?: string | Rpc;
     /**
+     * @description override the size of the icon inside the button
+     * @default size
+     * @example 'sm'
+     */
+    iconSize?: 'sm' | 'lg' | 'xl';
+    /**
      * @description when this button is a child of a {@link Form}, clicking it submits the form
      * @default false
      */

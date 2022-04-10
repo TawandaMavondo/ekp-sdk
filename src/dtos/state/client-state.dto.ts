@@ -4,6 +4,7 @@ export type ClientStateDto = Readonly<{
   forms?: Readonly<Record<string, any>>;
   client: Readonly<{
     path: string;
+    queryParams: Record<string, string>;
     hiddenChains: string[];
     selectedCurrency: CurrencyDto;
     watchedWallets: ReadonlyArray<WatchedWalletDto>;

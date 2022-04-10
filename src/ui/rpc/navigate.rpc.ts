@@ -7,6 +7,6 @@ export function navigate(
 ): Rpc {
   return {
     method: 'navigate',
-    params: [location, newTab, external],
+    params: [location, newTab, external, process.env.EKP_PLUGIN_ID],
   };
 }

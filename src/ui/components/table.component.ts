@@ -11,5 +11,6 @@ export function Table(props: TableProps): UiElement {
 
 export interface TableProps extends DefaultProps {
   header?: (string | Rpc)[];
-  body: (string | number | Rpc)[];
+  body: (string | number | Rpc | UiElement)[][];
+  widths?: string[];
 }
