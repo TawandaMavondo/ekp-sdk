@@ -3,6 +3,7 @@ import { CurrencyDto } from './currency.dto';
 export type ClientStateDto = Readonly<{
   forms?: Readonly<Record<string, any>>;
   client: Readonly<{
+    gameId: string;
     path: string;
     queryParams: Record<string, string>;
     hiddenChains: string[];
