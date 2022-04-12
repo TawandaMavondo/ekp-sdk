@@ -52,6 +52,13 @@ export type ButtonProps = DefaultProps &
      */
     iconSize?: 'sm' | 'lg' | 'xl';
     /**
+     * @description react classes to apply to the icon component inside the button
+     * - bootstrap classes are supported through reactstrap
+     * @see https://www.w3schools.com/bootstrap/bootstrap_ref_all_classes.asp
+     * @default undefined // no extra class names
+     * @example 'filled-star'
+     */ iconClassName?: string | Rpc;
+    /**
      * @description when this button is a child of a {@link Form}, clicking it submits the form
      * @default false
      */
