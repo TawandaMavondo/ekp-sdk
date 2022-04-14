@@ -3,7 +3,7 @@ export function documents(type) {
 }
 
 export function path(type) {
-  return `$.${collection(type)}`;
+  return `$['${collection(type)}']`;
 }
 
 export function collection(type) {
