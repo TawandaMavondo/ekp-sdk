@@ -63,15 +63,17 @@ export type DatatableColumn = Readonly<{
 }>;
 
 export type FilterSchemaDto = Readonly<{
+  allowCustomOption?: boolean;
   columnId: string;
   defaults?: boolean | boolean[] | Rpc;
+  elementMap?: Record<string, UiElement>;
+  icon?: string | Rpc;
+  imageMap?: Record<string, string>;
   max?: number | Rpc;
   min?: number | Rpc;
-  allowCustomOption?: boolean;
   options?: FilterOption[] | Rpc;
-  type: string;
-  imageMap?: Record<string, string>;
-  elementMap?: Record<string, UiElement>;
+  title?: string | Rpc;
+  type?: string;
 }>;
 
 export type DatatableView = 'grid' | 'column';

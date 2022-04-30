@@ -1,4 +1,5 @@
 export * from './array-join.rpc';
+export * from './commify.rpc';
 export * from './count.rpc';
 export * from './form-value.rpc';
 export * from './format-age.rpc';

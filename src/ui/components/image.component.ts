@@ -10,9 +10,9 @@ export function Image(props: ImageProps): UiElement {
 }
 
 export interface ImageProps extends DefaultProps {
-  src: string | Rpc;
-  size?: string | number | Rpc;
   height?: string | number | Rpc;
-  width?: string | number | Rpc;
   rounded?: boolean | Rpc;
+  size?: string | number | Rpc;
+  src: string | Rpc;
+  width?: string | number | Rpc;
 }
